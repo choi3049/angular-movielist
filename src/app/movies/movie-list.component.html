@@ -17,7 +17,9 @@
         <thead>
           <tr>
             <th>
-              <button class="btn-primary">画像を見る</button>
+              <button (click)="toggleImg()" class="btn-primary">
+                {{ isImgDisplayed ? "画像を隠す" : "画像を見る" }}
+              </button>
             </th>
             <th>映画</th>
             <th>監督</th>
@@ -30,6 +32,7 @@
           <tr *ngFor="let movie of movies">
             <td>
               <img
+                *ngIf="isImgDisplayed"
                 [src]="movie.imageUrl"
                 [title]="movie.name"
                 [style.width.px]="imgWidth"

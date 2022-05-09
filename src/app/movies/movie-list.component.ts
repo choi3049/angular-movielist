@@ -8,6 +8,7 @@ export class MovieListComponent {
   subTitle: string = "映画リスト";
   imgWidth: number = 200;
   imgMargin: number = 2;
+  isImgDisplayed: boolean = false;
   movies: any[] = [
     {
       movieId: 1,
@@ -28,4 +29,8 @@ export class MovieListComponent {
       imageUrl: "assets/images/1.jpeg",
     },
   ];
+
+  public toggleImg(): void {
+    this.isImgDisplayed = !this.isImgDisplayed;
+  }
 }
