@@ -9,6 +9,7 @@ export class MovieListComponent {
   imgWidth: number = 200;
   imgMargin: number = 2;
   isImgDisplayed: boolean = false;
+  filterText = "";
   movies: any[] = [
     {
       movieId: 1,
