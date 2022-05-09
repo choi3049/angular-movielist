@@ -6,6 +6,8 @@ import { Component } from "@angular/core";
 })
 export class MovieListComponent {
   subTitle: string = "映画リスト";
+  imgWidth: number = 200;
+  imgMargin: number = 2;
   movies: any[] = [
     {
       movieId: 1,
@@ -14,7 +16,7 @@ export class MovieListComponent {
       releaseDate: "2022-01-10",
       actor: "Keanu Reevas",
       rate: 4,
-      imageUrl: "",
+      imageUrl: "assets/images/0.jpeg",
     },
     {
       movieId: 2,
@@ -23,7 +25,7 @@ export class MovieListComponent {
       releaseDate: "2022-01-10",
       actor: "Keanu Reevas",
       rate: 3,
-      imageUrl: "",
+      imageUrl: "assets/images/1.jpeg",
     },
   ];
 }
