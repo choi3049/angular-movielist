@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { movie } from "./movie.model";
 
 @Component({
   selector: "app-movies",
@@ -10,7 +11,7 @@ export class MovieListComponent {
   imgMargin: number = 2;
   isImgDisplayed: boolean = false;
   filterText = "";
-  movies: any[] = [
+  movies: movie[] = [
     {
       movieId: 1,
       name: "matrix4",
@@ -18,6 +19,7 @@ export class MovieListComponent {
       releaseDate: "2022-01-10",
       actor: "Keanu Reevas",
       rate: 4,
+      price: 2.4,
       imageUrl: "assets/images/0.jpeg",
     },
     {
@@ -27,6 +29,7 @@ export class MovieListComponent {
       releaseDate: "2022-01-10",
       actor: "Keanu Reevas",
       rate: 3,
+      price: 2.4,
       imageUrl: "assets/images/1.jpeg",
     },
   ];
