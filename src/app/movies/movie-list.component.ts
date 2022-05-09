@@ -4,6 +4,7 @@ import { movie } from "./movie.model";
 @Component({
   selector: "app-movies",
   templateUrl: "./movie-list.component.html",
+  styleUrls: ["./movie-list.component.scss"],
 })
 export class MovieListComponent {
   subTitle: string = "映画リスト";
@@ -11,6 +12,7 @@ export class MovieListComponent {
   imgMargin: number = 2;
   isImgDisplayed: boolean = false;
   filterText = "";
+
   movies: movie[] = [
     {
       movieId: 1,
