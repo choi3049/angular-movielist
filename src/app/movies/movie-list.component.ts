@@ -26,7 +26,7 @@ export class MovieListComponent implements OnInit {
     },
     {
       movieId: 2,
-      name: "matrix4",
+      name: "matrix-4",
       director: "aa",
       releaseDate: "2022-01-10",
       actor: "Keanu Reevas",
