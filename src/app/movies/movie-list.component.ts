@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { movie } from "./movie.model";
 
 @Component({
@@ -6,7 +6,7 @@ import { movie } from "./movie.model";
   templateUrl: "./movie-list.component.html",
   styleUrls: ["./movie-list.component.scss"],
 })
-export class MovieListComponent {
+export class MovieListComponent implements OnInit {
   subTitle: string = "映画リスト";
   imgWidth: number = 200;
   imgMargin: number = 2;
@@ -38,5 +38,9 @@ export class MovieListComponent {
 
   public toggleImg(): void {
     this.isImgDisplayed = !this.isImgDisplayed;
+  }
+
+  public ngOnInit(): void {
+    console.log("Angular Lifecycle : ngOnInit()");
   }
 }
