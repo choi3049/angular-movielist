@@ -6,9 +6,15 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { MovieListComponent } from "./movies/movie-list.component";
 import { ConvertPipe } from "./shared/convert.pipe";
+import { StarScoreComponent } from "./shared/star-score.component";
 
 @NgModule({
-  declarations: [AppComponent, MovieListComponent, ConvertPipe],
+  declarations: [
+    AppComponent,
+    MovieListComponent,
+    ConvertPipe,
+    StarScoreComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
