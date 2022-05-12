@@ -1,10 +1,12 @@
 import { Component, OnInit } from "@angular/core";
+import { MovieService } from "./movie.service";
 import { movie } from "./movie.model";
 
 @Component({
   selector: "app-movies",
   templateUrl: "./movie-list.component.html",
   styleUrls: ["./movie-list.component.scss"],
+  providers: [MovieService],
 })
 export class MovieListComponent implements OnInit {
   subTitle: string = "映画リスト";
@@ -29,35 +31,16 @@ export class MovieListComponent implements OnInit {
   }
 
   filteredMovies: movie[] = [];
-  movies: movie[] = [
-    {
-      movieId: 1,
-      name: "matrix4",
-      director: "aa",
-      releaseDate: "2022-01-10",
-      actor: "Keanu Reevas",
-      rate: 4,
-      price: 2.4,
-      imageUrl: "assets/images/0.jpeg",
-    },
-    {
-      movieId: 2,
-      name: "matrix-4",
-      director: "aa",
-      releaseDate: "2022-01-10",
-      actor: "Keanu Reevas",
-      rate: 3,
-      price: 2.4,
-      imageUrl: "assets/images/1.jpeg",
-    },
-  ];
+  movies: movie[] = [];
+
+  constructor(private movieService: MovieService) {}
+  public ngOnInit(): void {
+    this.movies = this.movieService.getMovies();
+    this.filteredMovies = this.movies;
+  }
 
   public toggleImg(): void {
     this.isImgDisplayed = !this.isImgDisplayed;
-  }
-
-  public ngOnInit(): void {
-    console.log("Angular Lifecycle : ngOnInit()");
   }
 
   public callFromStar(rating: number) {
