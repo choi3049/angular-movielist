@@ -59,4 +59,8 @@ export class MovieListComponent implements OnInit {
   public ngOnInit(): void {
     console.log("Angular Lifecycle : ngOnInit()");
   }
+
+  public callFromStar(rating: number) {
+    console.log("from star : ", rating);
+  }
 }
