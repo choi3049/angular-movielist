@@ -1,32 +1,29 @@
 import { Injectable } from "@angular/core";
 import { movie } from "./movie.model";
+import { HttpClient, HttpErrorResponse } from "@angular/common/http";
+import { catchError, Observable, tap, throwError } from "rxjs";
 
 @Injectable({
   providedIn: "root",
 })
 export class MovieService {
-  getMovies(): movie[] {
-    return [
-      {
-        movieId: 1,
-        name: "matrix4",
-        director: "aa",
-        releaseDate: "2022-01-10",
-        actor: "Keanu Reevas",
-        rate: 4,
-        price: 2.4,
-        imageUrl: "assets/images/0.jpeg",
-      },
-      {
-        movieId: 2,
-        name: "matrix-4",
-        director: "aa",
-        releaseDate: "2022-01-10",
-        actor: "Keanu Reevas",
-        rate: 3,
-        price: 2.4,
-        imageUrl: "assets/images/1.jpeg",
-      },
-    ];
+  private movieUrl = "assets/json/movies.json";
+  constructor(private http: HttpClient) {}
+
+  getMovies(): Observable<movie[]> {
+    return this.http.get<movie[]>(this.movieUrl).pipe(
+      tap((data) => console.log(JSON.stringify(data))),
+      catchError(this.handleError)
+    );
+  }
+
+  private handleError(error: HttpErrorResponse) {
+    let errorMessage = "";
+    if (error.error instanceof ErrorEvent) {
+      errorMessage = "error: ${error.error.message}";
+    } else {
+      errorMessage = "return code: ${error.status}, message${error.message}";
+    }
+    return throwError(() => new Error(errorMessage));
   }
 }
