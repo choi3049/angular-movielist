@@ -7,6 +7,7 @@ import { AppComponent } from "./app.component";
 import { MovieListComponent } from "./movies/movie-list.component";
 import { ConvertPipe } from "./shared/convert.pipe";
 import { StarScoreComponent } from "./shared/star-score.component";
+import { WelcomeComponent } from "./welcome/welcome.component";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { StarScoreComponent } from "./shared/star-score.component";
     MovieListComponent,
     ConvertPipe,
     StarScoreComponent,
+    WelcomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
