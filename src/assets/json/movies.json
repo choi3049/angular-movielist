@@ -18,5 +18,45 @@
     "rate": 3,
     "price": 2.4,
     "imageUrl": "assets/images/1.jpeg"
+  },
+  {
+    "movieId": 3,
+    "name": "matrix-4",
+    "director": "aa",
+    "releaseDate": "2022-01-10",
+    "actor": "Keanu Reevas",
+    "rate": 1,
+    "price": 1.4,
+    "imageUrl": "assets/images/1.jpeg"
+  },
+  {
+    "movieId": 4,
+    "name": "matrix-4",
+    "director": "aa",
+    "releaseDate": "2022-01-10",
+    "actor": "Keanu Reevas",
+    "rate": 3,
+    "price": 2.4,
+    "imageUrl": "assets/images/1.jpeg"
+  },
+  {
+    "movieId": 5,
+    "name": "matrix-4",
+    "director": "aa",
+    "releaseDate": "2022-01-10",
+    "actor": "Keanu Reevas",
+    "rate": 3,
+    "price": 2.4,
+    "imageUrl": "assets/images/1.jpeg"
+  },
+  {
+    "movieId": 6,
+    "name": "matrix-4",
+    "director": "aa",
+    "releaseDate": "2022-01-10",
+    "actor": "Keanu Reevas",
+    "rate": 3,
+    "price": 2.4,
+    "imageUrl": "assets/images/1.jpeg"
   }
 ]
