@@ -52,7 +52,7 @@ export class MovieListComponent implements OnInit, OnDestroy {
   public performFilter(filterBy: string): movie[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.movies.filter((movie: movie) => {
-      return movie.name.toLocaleLowerCase().includes(filterBy);
+      return movie.title.toLocaleLowerCase().includes(filterBy);
     });
   }
 

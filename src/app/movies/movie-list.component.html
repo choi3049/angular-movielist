@@ -34,14 +34,14 @@
               <img
                 *ngIf="isImgDisplayed"
                 [src]="movie.imageUrl"
-                [title]="movie.name | uppercase"
+                [title]="movie.title | uppercase"
                 [style.width.px]="imgWidth"
                 [style.margin.px]="imgMargin"
               />
             </td>
             <td>
-              <a [routerLink]="['/movies', movie.movieId]">
-                {{ movie.name | convert: "-":" " }}
+              <a [routerLink]="['/movies', movie.title]">
+                {{ movie.title | convert: "-":" " }}
               </a>
             </td>
             <td>{{ movie.director | uppercase }}</td>

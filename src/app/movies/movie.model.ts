@@ -1,6 +1,6 @@
 export interface movie {
   movieId: number;
-  name: string;
+  title: string;
   director: string;
   releaseDate: string;
   actor: string;
